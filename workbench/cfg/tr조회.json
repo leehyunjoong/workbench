@@ -1,0 +1,51 @@
+{
+	"document_attr":
+	{
+		"output_type" : "csv",
+		"output_file" : "cpi_korea_#DATE.csv"
+	},
+
+	"transaction_attr":
+	{  
+		"seqid":"0",
+		"type":"struct",
+		"trcode":"272400",
+		"subtrcode":"000",
+		"recordcount":"-1",
+		
+		"key_attr":		  
+		{
+			"key_type" : "single",
+			"key_id" : "16013",
+			"key_market": "kosdaq", 
+			"key_list": "005930,000660"  
+		},
+ 
+		"keys":
+		[
+			{
+				"id" : "1900",
+				"value":"201906"
+			}
+		],
+
+		"items":
+		[
+			{
+				"id":"801",
+				"meta_name":"date",
+				"type":"STRING"
+			},		
+			{
+				"id":"802",
+				"meta_name":"cpi",
+				"type":"STRING"
+			},
+			{
+				"id":"804",
+				"meta_name":"change",
+				"type":"STRING"
+			}
+		]
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"version" : "1",
+	
+	"jobs":[
+	  {
+		"file" : "mast_kospi_code.json",
+		"type" : "mast",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "191520",
+		"endtime" : "200000"
+	  },
+  	  {
+		"file" : "mast_kosdaq_code.json",
+		"type" : "mast",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  }
+/*	  
+	  {
+		"file" : "kospi_sect_mast.json",
+		"type" : "mast",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  },
+	  {
+		"file" : "svc_daily_kospi_code.json",
+		"type" : "svc",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  },
+	  {
+		"file" : "svc_daily_kosdaq_code.json",
+		"type" : "svc",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  },	  
+	  {
+		"file" : "kosdaq_daily.json",
+		"type" : "svc",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "230000",
+		"endtime" : "200000"
+	  }
+*/	  
+	]
+
+}

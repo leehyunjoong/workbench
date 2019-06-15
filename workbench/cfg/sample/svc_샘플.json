@@ -1,0 +1,163 @@
+{
+	/* 
+		해당 트랜잭션 이름을 기재 합니다.
+	*/
+	"name" : "kospi 종목 일별",
+	
+	"document_attr":
+	{
+		/* 
+			output 파일 형태를 지정합니다.
+			 - "csv " : comma delimeter csv 파일로 저장 
+		*/
+		"output_type" : "csv",
+
+		
+		/* 
+			output 파일명을 지정합니다.
+			 - #DATA : YYYYMMDD로 대체
+			 - #TIME : HHMMSS로 대체
+			 - #CODE : 종목명으로 대체 
+		*/		
+
+		"output_file" : "kospi_daily_#DATE.csv",
+		
+		/* 
+			복수 종목인 경우 단일 파일에 merge 할것인지 여부 
+			 - "y" : 단일 파일로 저장
+			 - "n" : 종목별 파일로 저장 
+		*/		
+		"output_merge" : "y"   // merge:"y", seperate file : "n"
+	},
+
+	// 트랜잭션의 속성을 지정합니다 
+	"transaction_attr":
+	{  
+		/*
+		 아직 의미 없음 
+		*/
+		"seqid":"0",   
+		
+		/*
+		 트랜잭션 형태 
+		 - "pattern" : 일반 패턴 조회
+		 - "struct" : 일반 스트럭쳐 조회
+		*/		
+		"type":"pattern",
+		
+		/*
+		 스트럭쳐 조회인경우에 유효
+		*/				
+		"trcode":"0",
+		"subtrcode":"0",
+
+		/*
+		 출력받고자 하는 데이터 갯수
+		 - "-1" : 지정된 기간으 전체
+		 - 그외는 개수 지정
+		*/				
+		"recordcount":"-1",
+		
+		// 조회 키의 속성을 지정
+		"key_attr":		  
+		{
+		
+			/*
+				키의 유형을 지정
+				- "market" : 시장 전체 종목을 한꺼번에 조회,아래의 key_market으로 구분
+				- "multi" : 지정된 복수 종목을 조회, key_list에 지정
+				- "single" : 단일 종목 , key로 지정
+			*/				
+			"key_type" : "market", 
+			"key_id" : "16013",
+			"key_market": "kospi",  
+			"key_list": "005930,000660"  
+		},
+ 
+		"keys":
+		[
+			{
+				"id" : "16013",
+				"value":"005930"
+			},
+			{
+				"id" : "1060",
+				"value":"1"
+			},
+			{
+				"id" : "1001",
+				"value":"1"
+			},
+			{
+				"id" : "1350",
+				"value":"2"
+			},
+			{
+				"id" : "1010",
+				"value":"20190101"
+			},
+			{
+				"id" : "1011",
+				"value":"0DAY"
+			}			
+		],
+
+		// output 항목을 지정합니다.
+		"items":
+		[
+			{
+				// 조회를 받고자 하는 FID
+				"id":"16013",
+				// 변화 하고자하는 Meta name
+				"meta_name":"CODE",
+				// 데이터 타입
+				"type":"STRING"
+			},		
+			{
+				"id":"12506",
+				"meta_name":"DATE",
+				"type":"DATE"
+			},
+			{
+				"id":"15001",
+				"meta_name":"CLOSE",
+				"type":"STRING"
+			},
+			{
+				"id":"15472",
+				"meta_name":"CHANGE",
+				"type":"STRING"
+			},
+			{
+				"id":"15004",
+				"meta_name":"changeratio",
+				"type":"STRING"
+			},
+			{
+				"id":"15009",
+				"meta_name":"LOW",
+				"type":"STRING"
+			},
+			{
+				"id":"15010",
+				"meta_name":"HIGH",
+				"type":"STRING"
+			},			
+			{
+				"id":"15011",
+				"meta_name":"LOW",
+				"type":"STRING"
+			},						
+			{
+				"id":"15015",
+				"meta_name":"VOLUME",
+				"type":"STRING"
+			},									
+			{
+				"id":"30621",
+				"meta_name":"VALUE",
+				"type":"STRING"
+			}												
+		]
+	}
+}

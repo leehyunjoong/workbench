@@ -1,0 +1,50 @@
+{
+	"name" : "kosdaq 종목 마스터",
+	"document_attr":
+	{
+		"output_type" : "csv",
+		"output_file" : "kosdaq_code_mast_#DATE.csv"
+	},
+
+	"transaction_attr":
+	{  
+		"seqid":"0",
+		"type":"pattern",
+		"trcode":"0",
+		"subtrcode":"0",
+		"recordcount":"-1",
+		
+		"key_attr":		  
+		{
+			"key_type" : "single",
+			"key_id" : "16013",
+			"key_market": "kosdaq"  
+		},
+ 
+		"keys":
+		[
+			{
+				"id" : "16013",
+				"value":"1*004"
+			},
+			{
+				"id" : "1091",
+				"value":"16013"
+			}
+		],
+
+		"items":
+		[
+			{
+				"id":"16013",
+				"meta_name":"CODE",
+				"type":"STRING"
+			},
+			{
+				"id":"16002",
+				"meta_name":"NAME",
+				"type":"STRING"
+			}
+		]
+	}
+}

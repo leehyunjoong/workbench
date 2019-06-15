@@ -1,0 +1,73 @@
+{
+	"version" : "1",
+	
+	// 자동으로 처리할 작업을 지정
+	"jobs":[
+	  {
+		// 연결할 트랜잭션
+		"file" : "mast_kospi_code.json",
+		
+		/*
+			"svc" : 실질적으로 결과 파일이 생성
+			"mast" : 내부적인 종목 검색용
+		*/
+		"type" : "mast",
+		
+		/*
+			배치작업 주기 
+			"D" : 일별
+		*/
+		"period" : "D",
+		"interval" :"5M",
+		
+		/*
+			배치 시작 시간 HHMMDD
+		*/		
+		"starttime" : "191520",
+		"endtime" : "200000"
+	  },
+  	  {
+		"file" : "mast_kosdaq_code.json",
+		"type" : "mast",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  }
+/*	  
+	  {
+		"file" : "kospi_sect_mast.json",
+		"type" : "mast",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  },
+	  {
+		"file" : "svc_daily_kospi_code.json",
+		"type" : "svc",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  },
+	  {
+		"file" : "svc_daily_kosdaq_code.json",
+		"type" : "svc",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  },	  
+	  {
+		"file" : "kosdaq_daily.json",
+		"type" : "svc",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "230000",
+		"endtime" : "200000"
+	  }
+*/	  
+	]
+
+}

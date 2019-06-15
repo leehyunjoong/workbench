@@ -1,0 +1,88 @@
+{
+	"name" : "kosdaq 종목 일별",
+	
+	"document_attr":
+	{
+		"output_type" : "csv",
+		"output_file" : "kosdaq_daily_#DATE.csv",
+		"output_merge" : "y"   // merge:"y", seperate file : "n"
+	},
+
+	"transaction_attr":
+	{  
+		"seqid":"0",
+		"type":"pattern",
+		"trcode":"0",
+		"subtrcode":"0",
+		"recordcount":"-1",
+		
+		"key_attr":		  
+		{
+			"key_type" : "market",
+			"key_id" : "16013",
+			"key_market": "kosdaq"  
+		},
+ 
+		"keys":
+		[
+			{
+				"id" : "16013",
+				"value":"005930"
+			},
+			{
+				"id" : "1060",
+				"value":"1"
+			},
+			{
+				"id" : "1001",
+				"value":"1"
+			},
+			{
+				"id" : "1350",
+				"value":"2"
+			},
+			{
+				"id" : "1010",
+				"value":"-10DAY"
+			},
+			{
+				"id" : "1011",
+				"value":"0DAY"
+			}			
+		],
+
+		"items":
+		[
+			{
+				"id":"16013",
+				"meta_name":"CODE",
+				"type":"STRING"
+			},		
+			{
+				"id":"12506",
+				"meta_name":"DATE",
+				"type":"STRING"
+			},
+			{
+				"id":"15004",
+				"meta_name":"date",
+				"type":"STRING"
+			},
+			{
+				"id":"15001",
+				"meta_name":"CLOSE",
+				"type":"STRING"
+			},
+			{
+				"id":"15009",
+				"meta_name":"OPEN",
+				"type":"STRING"
+			},
+			{
+				"id":"15010",
+				"meta_name":"HIGH",
+				"type":"STRING"
+			}									
+		]
+	}
+}
