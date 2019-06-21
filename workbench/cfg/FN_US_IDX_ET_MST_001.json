@@ -1,9 +1,11 @@
 {
-	"name" : "kospi 선물 마스터",
+	"name" : "미국업종마스터",
 	"document_attr":
 	{
 		"output_type" : "csv",
-		"output_file" : "kospiFUT_code_mast_#DATE.csv"
+		"output_file" : "FN_US_IDX_ET_MST_001.csv",
+		"output_merge" : "n",   // merge:"y", seperate file : "n"
+		"savemid" : "y"
 	},
 
 	"transaction_attr":
@@ -18,14 +20,14 @@
 		{
 			"key_type" : "single",
 			"key_id" : "16013",
-			"key_market": "kospi"  
+			"key_date": "FN_US_IDX_ET_MST_001"  
 		},
  
 		"keys":
 		[
 			{
 				"id" : "16013",
-				"value":"*005"
+				"value":"*084"
 			},
 			{
 				"id" : "1091",

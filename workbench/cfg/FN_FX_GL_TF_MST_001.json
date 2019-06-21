@@ -1,9 +1,11 @@
 {
-	"name" : "kospi 종목 마스터",
+	"name" : "해외환율마스터",
 	"document_attr":
 	{
 		"output_type" : "csv",
-		"output_file" : "kospi_code_mast_#DATE.csv"
+		"output_file" : "FN_FX_GL_TF_MST_001.csv",
+		"output_merge" : "y",   // merge:"y", seperate file : "n"
+		"savemid" : "y"
 	},
 
 	"transaction_attr":
@@ -18,14 +20,14 @@
 		{
 			"key_type" : "single",
 			"key_id" : "16013",
-			"key_market": "kospi"  
+			"key_data": "FN_FX_GL_TF_MST_001"  
 		},
  
 		"keys":
 		[
 			{
 				"id" : "16013",
-				"value":"1*002"
+				"value":"*047"
 			},
 			{
 				"id" : "1091",

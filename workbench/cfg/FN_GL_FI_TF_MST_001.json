@@ -1,9 +1,11 @@
 {
-	"name" : "kospi 종목 마스터",
+	"name" : "해외국채금리",
 	"document_attr":
 	{
 		"output_type" : "csv",
-		"output_file" : "kospi_code_mast_#DATE.csv"
+		"output_file" : "FN_GL_FI_TR_MST_001.csv",
+		"output_merge" : "y",   // merge:"y", seperate file : "n"
+		"savemid" : "y"
 	},
 
 	"transaction_attr":
@@ -18,26 +20,18 @@
 		{
 			"key_type" : "single",
 			"key_id" : "16013",
-			"key_market": "kospi"  
+			"key_date": "FN_GL_FI_TR_MST_001"  
 		},
  
 		"keys":
 		[
 			{
 				"id" : "16013",
-				"value":"*002"
+				"value":"*025"
 			},
 			{
-				"id" : "1090",
-				"value":"15028"
-			},
-			{
-				"id" : "1031",
-				"value":"-1"
-			},
-			{
-				"id" : "1030",
-				"value":"-1"
+				"id" : "1091",
+				"value":"16013"
 			}
 		],
 

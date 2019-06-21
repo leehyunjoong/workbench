@@ -1,26 +1,28 @@
 {
-	"name" : "kosdaq 종목 일별",
+	"name" : "해외환율일별",
 	
 	"document_attr":
 	{
 		"output_type" : "csv",
-		"output_file" : "kosdaq_daily_#DATE.csv",
-		"output_merge" : "y"   // merge:"y", seperate file : "n"
+		"output_file" : "FN_FX_GL_TF_PRC_DI_001.csv",
+		"output_merge" : "y",   // merge:"y", seperate file : "n"
+		"savemid":"y"
 	},
 
+	// 트랜잭션의 속성을 지정합니다 
 	"transaction_attr":
 	{  
-		"seqid":"0",
+		"seqid":"0",   
 		"type":"pattern",
 		"trcode":"0",
 		"subtrcode":"0",
 		"recordcount":"-1",
-		
+
 		"key_attr":		  
 		{
-			"key_type" : "market",
+			"key_type" : "market", 
 			"key_id" : "16013",
-			"key_market": "kosdaq"  
+			"key_data": "FN_FX_GL_TF_MST_001" 
 		},
  
 		"keys":
@@ -43,7 +45,7 @@
 			},
 			{
 				"id" : "1010",
-				"value":"-10DAY"
+				"value":"20100101"
 			},
 			{
 				"id" : "1011",
@@ -61,28 +63,38 @@
 			{
 				"id":"12506",
 				"meta_name":"DATE",
+				"type":"DATE"
+			},
+			{
+				"id":"14531",
+				"meta_name":"CPRC",
 				"type":"STRING"
 			},
 			{
-				"id":"15004",
-				"meta_name":"date",
+				"id":"14756",
+				"meta_name":"CMP",
+				"type":"STRING"
+			},			
+			{
+				"id":"14757",
+				"meta_name":"CPRC_FLUC_RT",
+				"type":"STRING"
+			},				
+			{
+				"id":"14754",
+				"meta_name":"OPRC",
 				"type":"STRING"
 			},
 			{
-				"id":"15001",
-				"meta_name":"CLOSE",
+				"id":"14761",
+				"meta_name":"HPRC",
 				"type":"STRING"
-			},
+			},			
 			{
-				"id":"15009",
-				"meta_name":"OPEN",
+				"id":"14752",
+				"meta_name":"LPRC",
 				"type":"STRING"
-			},
-			{
-				"id":"15010",
-				"meta_name":"HIGH",
-				"type":"STRING"
-			}									
+			}
 		]
 	}
 }

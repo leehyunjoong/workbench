@@ -1,9 +1,11 @@
 {
-	"name" : "kospi 업종 마스터",
+	"name" : "미국종목마스터",
 	"document_attr":
 	{
 		"output_type" : "csv",
-		"output_file" : "kospi_sect_mast_#DATE.csv"
+		"output_file" : "FN_US_EQ_ET_MST_001.csv",
+		"output_merge" : "n",   // merge:"y", seperate file : "n"
+		"savemid" : "y"
 	},
 
 	"transaction_attr":
@@ -16,19 +18,19 @@
 		
 		"key_attr":		  
 		{
-			"key_type" : "single",
+			"key_type" : "multi",
 			"key_id" : "16013",
-			"key_market": "kospi_sect"  
+			"key_data": "DJI@DJI,NAS@NDX,SPI@SPX"  
 		},
  
 		"keys":
 		[
 			{
-				"id" : "1070",
-				"value":"101"
+				"id" : "16013",
+				"value":"*084"
 			},
 			{
-				"id" : "1091",
+				"id" : "1090",
 				"value":"16013"
 			}
 		],

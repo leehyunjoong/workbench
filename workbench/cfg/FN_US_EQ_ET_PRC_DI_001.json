@@ -1,11 +1,12 @@
 {
-	"name" : "주요금리 일별",
+	"name" : "미국종목일별",
 	
 	"document_attr":
 	{
 		"output_type" : "csv",
-		"output_file" : "kofia_yield_daily_#DATE.csv",
-		"output_merge" : "y"   // merge:"y", seperate file : "n"
+		"output_file" : "FN_US_EQ_ET_PRC_DI_001.csv",
+		"output_merge" : "y",   // merge:"y", seperate file : "n"
+		"savemid":"y"
 	},
 
 	// 트랜잭션의 속성을 지정합니다 
@@ -19,17 +20,16 @@
 
 		"key_attr":		  
 		{
-			"key_type" : "multi", 
+			"key_type" : "file", 
 			"key_id" : "16013",
-			"key_market": "kospi",  
-			"key_list": "KFIA103006*097"  
+			"key_data": "fn_us_eq_et_mst_001.csv"
 		},
  
 		"keys":
 		[
 			{
 				"id" : "16013",
-				"value":"005930"
+				"value":"AMS@AA-*083"
 			},
 			{
 				"id" : "1060",
@@ -66,10 +66,35 @@
 				"type":"DATE"
 			},
 			{
-				"id":"15175",
-				"meta_name":"CLOSE",
-				"type":"STRING"
-			}												
+				"id":"15001",
+				"meta_name":"CPRC",
+				"type":"NUMERIC"
+			},
+			{
+				"id":"15472",
+				"meta_name":"CMP",
+				"type":"NUMERIC"
+			},			
+			{
+				"id":"15004",
+				"meta_name":"CPRC_FLUC_RT",
+				"type":"NUMERIC"
+			},				
+			{
+				"id":"15009",
+				"meta_name":"OPRC",
+				"type":"NUMERIC"
+			},
+			{
+				"id":"15010",
+				"meta_name":"HPRC",
+				"type":"NUMERIC"
+			},			
+			{
+				"id":"15011",
+				"meta_name":"LPRC",
+				"type":"NUMERIC"
+			}
 		]
 	}
 }

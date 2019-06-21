@@ -1,9 +1,11 @@
 {
-	"name" : "kosdaq 종목 마스터",
+	"name" : "금투협 최종호가수익률",
 	"document_attr":
 	{
 		"output_type" : "csv",
-		"output_file" : "kosdaq_code_mast_#DATE.csv"
+		"output_file" : "FN_FI_KR_KOFIA_MST_001.csv",
+		"output_merge" : "n",   // merge:"y", seperate file : "n"
+		"savemid" : "y"
 	},
 
 	"transaction_attr":
@@ -18,14 +20,14 @@
 		{
 			"key_type" : "single",
 			"key_id" : "16013",
-			"key_market": "kosdaq"  
+			"key_data": "FN_FI_KR_KOFIA_MST_001"  
 		},
  
 		"keys":
 		[
 			{
 				"id" : "16013",
-				"value":"1*004"
+				"value":"*097"
 			},
 			{
 				"id" : "1091",

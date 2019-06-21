@@ -3,7 +3,7 @@
 	
 	"jobs":[
 	  {
-		"file" : "mast_kospi_code.json",
+		"file" : "FN_KR_EQ_KX_MST_001.json",
 		"type" : "mast",
 		"period" : "D",
 		"interval" :"5M",
@@ -11,14 +11,38 @@
 		"endtime" : "200000"
 	  },
   	  {
-		"file" : "mast_kosdaq_code.json",
+		"file" : "FN_KR_IDX_KX_MST_001.json",
 		"type" : "mast",
 		"period" : "D",
 		"interval" :"5M",
 		"starttime" : "190000",
 		"endtime" : "200000"
-	  }
-/*	  
+	  },
+  	  {
+		"file" : "FN_FI_KR_KOFIA_MST_001.json",
+		"type" : "mast",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  },	  
+  	  {
+		"file" : "FN_GL_FI_TR_MST_001.json",
+		"type" : "mast",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  },  
+  	  {
+		"file" : "FN_FX_GL_TF_MST_001.json",
+		"type" : "mast",
+		"period" : "D",
+		"interval" :"5M",
+		"starttime" : "190000",
+		"endtime" : "200000"
+	  }	  	  	  
+  /*
 	  {
 		"file" : "kospi_sect_mast.json",
 		"type" : "mast",

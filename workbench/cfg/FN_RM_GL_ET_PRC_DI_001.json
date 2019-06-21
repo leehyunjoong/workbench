@@ -1,12 +1,12 @@
 {
-	"name" : "kospi 종목 일별",
+	"name" : "원자재 일별",
 	
 	"document_attr":
 	{
 		"output_type" : "csv",
-		"output_file" : "kospi_daily_#DATE.csv",
+		"output_file" : "FN_RM_GL_ET_PRC_DI_001.csv",
 		"output_merge" : "y",   // merge:"y", seperate file : "n"
-		"savemid":"n"
+		"savemid":"y"
 	},
 
 	// 트랜잭션의 속성을 지정합니다 
@@ -20,10 +20,9 @@
 
 		"key_attr":		  
 		{
-			"key_type" : "market", 
+			"key_type" : "file", 
 			"key_id" : "16013",
-			"key_market": "kosdaq",  
-			"key_list": "005930,000660"  
+			"key_data": "FN_GL_RM_ET_MST_001.csv" 
 		},
  
 		"keys":
@@ -46,7 +45,7 @@
 			},
 			{
 				"id" : "1010",
-				"value":"19900101"
+				"value":"20100101"
 			},
 			{
 				"id" : "1011",
@@ -58,44 +57,44 @@
 		[
 			{
 				"id":"16013",
-				"meta_name":"shcode",
+				"meta_name":"CODE",
 				"type":"STRING"
 			},		
 			{
 				"id":"12506",
-				"meta_name":"date",
+				"meta_name":"DATE",
 				"type":"DATE"
 			},
 			{
+				"id":"15001",
+				"meta_name":"CPRC",
+				"type":"STRING"
+			},
+			{
+				"id":"15472",
+				"meta_name":"CMP",
+				"type":"STRING"
+			},			
+			{
+				"id":"15004",
+				"meta_name":"CPRC_FLUC_RT",
+				"type":"STRING"
+			},				
+			{
 				"id":"15009",
-				"meta_name":"open",
+				"meta_name":"OPRC",
 				"type":"STRING"
 			},
 			{
 				"id":"15010",
-				"meta_name":"high",
+				"meta_name":"HPRC",
 				"type":"STRING"
 			},			
 			{
 				"id":"15011",
-				"meta_name":"low",
+				"meta_name":"LPRC",
 				"type":"STRING"
-			},				
-			{
-				"id":"15001",
-				"meta_name":"close",
-				"type":"STRING"
-			},
-			{
-				"id":"15015",
-				"meta_name":"volume",
-				"type":"STRING"
-			},									
-			{
-				"id":"30621",
-				"meta_name":"value",
-				"type":"STRING"
-			}												
+			}
 		]
 	}
 }
